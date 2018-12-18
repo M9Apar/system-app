@@ -1,0 +1,27 @@
+By creating system application you can access framework classes and system level permissions below are steps which required to make your android applicaiton as system application
+
+Step 1 -> Create your android application with supported IDE
+Step 2 -> Open your AndroidMenifest.xml file
+Step 3 -> Add android:sharedUserId="android.uid.system" in <menifest> tag eg:
+		
+		<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		    package="com.example.yourpackage"
+		    android:versionCode="1"
+++		    android:sharedUserId="android.uid.system"
+		    android:versionName="1.0">
+	<!-- THATS IT NOW YOU CAN CODE -->
+
+Step 4 -> After completing you code you need to generate .apk file of your application in Android Studio you can generate APK file from "Build" menu and then "Generate APK"
+Step 5 -> Now we required to sign generate APK with System certificates which can be found in repository use below linux command to do so from your linux terminal
+	
+		java -jar signapk.jar -w platform.x509.pem platform.pk8 APPLICATION.apk APPLICATION_sign.apk
+
+
+Note : by making your application as System app you can access restricted permission and API(s) but it has its own limitation such as you can't access internal/external storage with System app
+       for detailed information on key types and image signing, please see:
+		https://source.android.com/devices/tech/ota/sign_builds.html
+
+you can download latest certificate keys and signapk.jar from below link
+
+	https://github.com/aosp-mirror/platform_build/tree/master/target/product/security
+
