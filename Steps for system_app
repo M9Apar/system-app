@@ -1,3 +1,5 @@
+*****Signing can be use for variouse purpose such as APK/Image/OTA*****
+
 By creating system application you can access framework classes and system level permissions below are steps which required to make your android applicaiton as system application
 
 Step 1 -> Create your android application with supported IDE
