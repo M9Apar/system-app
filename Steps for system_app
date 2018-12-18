@@ -15,7 +15,7 @@ Step 4 -> After completing you code you need to generate .apk file of your appli
 Step 5 -> Now we required to sign generate APK with System certificates which can be found in repository use below linux command to do so from your linux terminal
 	
 		java -jar signapk.jar -w platform.x509.pem platform.pk8 APPLICATION.apk APPLICATION_sign.apk
-
+	  you can also use same command to sign AOSP/Custom ROM image or OTA file(s)
 
 Note : by making your application as System app you can access restricted permission and API(s) but it has its own limitation such as you can't access internal/external storage with System app
        for detailed information on key types and image signing, please see:
